@@ -28,12 +28,12 @@ async def on_message(message):
           await message.channel.send("eğvle eğvle")
 
      if message.content.startswith("!add_kural"):
-          with open('arkurallar.txt', 'a') as txtfile: 
-               txtfile.write("\n"+message.content[11:])
+          with open('arkurallar', 'a') as file: 
+               file.write("\n"+message.content[11:])
           await message.channel.send("Kural başarıyla eklendi.")
      
      if message.content.startswith("!random"):
-          with open('arkurallar.txt') as csvfile:
+          with open('arkurallar') as csvfile:
                csv_reader = csv.reader(csvfile, delimiter='½')
                nums = []
                kurallar = []
@@ -49,7 +49,7 @@ async def on_message(message):
                await message.channel.send(f'Kural {nums[rand]}) {kurallar[rand]}')
 
      if message.content.startswith("!kactane"):
-          with open('arkurallar.txt') as csvfile:
+          with open('arkurallar') as csvfile:
                csv_reader = csv.reader(csvfile, delimiter='½')
                count = -1
                for row in csv_reader:
