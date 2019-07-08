@@ -80,4 +80,5 @@ client.run('token')
 """
 
 #client.run("MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs")
-client.run(str(os.environ.get('MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs')))
+#client.run(str(os.environ.get('MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs')))
+client.run(str(environ.get('MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs')))
