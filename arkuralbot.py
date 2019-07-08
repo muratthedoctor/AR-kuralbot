@@ -5,6 +5,7 @@ import asyncio
 import time
 import csv
 import random
+import os
 
 client = discord.Client()
 #client = commands.Bot(command_prefix = "_")
@@ -81,4 +82,4 @@ client.run('token')
 
 #client.run("MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs")
 #client.run(str(os.environ.get('MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs')))
-client.run(str(environ.get('MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs')))
+client.run(str(os.environ.get('MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs')))
