@@ -62,6 +62,9 @@ async def on_message(message):
      
      if message.content.startswith("!yılan"):
           await message.channel.send("tısssss :snake: :snake:")
+          
+     if message.content.startswith("ride or die"):
+          await message.channel.send("Remember?:red_car:")
 
 """
 class MyClient(discord.Client):
@@ -82,4 +85,4 @@ client.run('token')
 
 #client.run("MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs")
 #client.run(str(os.environ.get('MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs')))
-client.run(str(os.environ.get('MzMzMjQxMTM0MDIzMTgwMjk5.XSMVwQ._DX2ZJXhSip24gxscHbfIVqhlKs')))
+client.run(str(os.environ.get('BOT_TOKEN')))
