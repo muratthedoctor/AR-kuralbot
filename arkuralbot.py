@@ -1,6 +1,7 @@
 import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
+from discord.utils import get
 import asyncio
 import time
 import csv
@@ -82,6 +83,6 @@ class MyClient(discord.Client):
 client = MyClient()
 client.run('token')
 """
-
-client.run('BOT_TOKEN')
+token = os.environ.get("BOT_TOKEN")
+client.run(token)
 #client.run(str(os.environ.get('BOT_TOKEN')))
