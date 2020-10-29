@@ -36,7 +36,7 @@ async def on_message(message):
                await message.channel.send(picture)'''
           
           embed = discord.Embed(title="Title", description="Desc", color=0x00ff00) #creates embed
-          file = discord.File("/catvibe.gif", filename="image.gif")
+          file = discord.File("catvibe.gif", filename="image.gif")
           embed.set_image(url="attachment://image.gif")
           await ctx.send(file=file, embed=embed)
 
