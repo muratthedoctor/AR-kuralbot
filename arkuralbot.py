@@ -30,7 +30,9 @@ async def on_message(message):
           await message.channel.send("eğvle eğvle")
           
      if message.content.startswith("!catvibe"):
-          await message.channel.send(file=discord.File('catvibe.gif'))
+          with open('catvibe.gif', 'rb') as f:
+               picture = discord.File(f)
+               await channel.send(channel, picture)
 
      if message.content.startswith("!add_kural"):
           with open('arkurallar', 'a') as txtfile: 
