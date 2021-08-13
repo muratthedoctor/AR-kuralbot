@@ -28,6 +28,15 @@ async def on_message(message):
 
      if message.content == "orospu":
           await message.channel.send("eğvle eğvle")
+
+     if message.content == "sa":
+          await message.channel.send("cami mi lan burası")
+
+     if message.content == "selamın aleyküm":
+          await message.channel.send("cami mi lan burası"
+
+     if message.content == "Selamın aleyküm":
+          await message.channel.send("cami mi lan burası"
           
      if message.content.startswith("!catvibe"):
           
