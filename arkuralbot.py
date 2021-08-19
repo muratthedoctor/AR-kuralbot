@@ -23,8 +23,10 @@ async def on_message(message):
      if message.author == client.user:
           return
 
+'''
      if message.content.startswith("!help"):
           await message.channel.send("```1. 'orospu' yazarsan 'eğvle eğvle' yazarım.\n2. '!random' yazarsan rastgele kural yazarım.\n3. '!hello' yazarsan 'Hello [username]' yazarım.\n5. Kural eklemek istiyorsan '!add_kural 123½ÖRNEK KURAL HEBELE.' şeklinde gir.\n6. '!kactane' yazarsan kaç kural olduğun hatırlatırım. (Yeni kural eklerken lazım.)```")
+'''
 
      if message.content == "orospu":
           await message.channel.send("eğvle eğvle")
@@ -56,7 +58,7 @@ async def on_message(message):
                picture = discord.File(f)
                await message.channel.send(picture)'''
           
-          embed = discord.Embed(title="Title", description="Desc", color=0x00ff00) #creates embed
+          embed = discord.Embed(title="Kedi", description="keediiieeeeeğğğğ...", color=0x00ff00) #creates embed
           file = discord.File("catvibe.gif", filename="image.gif")
           embed.set_image(url="attachment://image.gif")
           await message.channel.send(file=file, embed=embed)
