@@ -62,12 +62,12 @@ async def on_message(message):
           file = discord.File("catvibe.gif", filename="image.gif")
           embed.set_image(url="attachment://image.gif")
           await message.channel.send(file=file, embed=embed)
-
+'''
      if message.content.startswith("!add_kural"):
           with open('arkurallar', 'a') as txtfile: 
                txtfile.write("\n"+message.content[11:])
           await message.channel.send("Kural başarıyla eklendi.")
-     
+'''
      if message.content.startswith("!random"):
           with open('arkurallar') as csvfile:
                csv_reader = csv.reader(csvfile, delimiter='½')
