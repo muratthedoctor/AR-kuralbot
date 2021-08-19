@@ -55,7 +55,7 @@ async def on_message(message):
           '''with open('catvibe.gif', 'rb') as f:
                picture = discord.File(f)
                await message.channel.send(picture)'''
-          
+
           embed = discord.Embed(title="Kedi", description="keediiieeeeeğğğğ...", color=0x00ff00) #creates embed
           file = discord.File("catvibe.gif", filename="image.gif")
           embed.set_image(url="attachment://image.gif")
@@ -92,10 +92,10 @@ async def on_message(message):
 
      if message.content.startswith("!hello"):
           await message.channel.send("Hello {0.author.mention}".format(message))
-     
+
      if message.content.startswith("!yılan"):
           await message.channel.send("tısssss :snake: :snake:")
-          
+
      if message.content.startswith("ride or die"):
           await message.channel.send("Remember?:red_car:")
 
