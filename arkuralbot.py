@@ -37,9 +37,9 @@ async def on_message(message):
 
      if message.content == "Selamın aleyküm":
           await message.channel.send("cami mi lan burası"
-          
+
      if message.content.startswith("!catvibe"):
-          
+
           '''with open('catvibe.gif', 'rb') as f:
                picture = discord.File(f)
                await message.channel.send(picture)'''
