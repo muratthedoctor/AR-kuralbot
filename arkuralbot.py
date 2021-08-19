@@ -32,11 +32,23 @@ async def on_message(message):
      if message.content == "sa":
           await message.channel.send("cami mi lan burası")
 
+     if message.content == "Sa":
+          await message.channel.send("cami mi lan burası")
+
+     if message.content == "SA":
+          await message.channel.send("cami mi lan burası")
+
      if message.content == "selamın aleyküm":
-          await message.channel.send("cami mi lan burası"
+          await message.channel.send("cami mi lan burası")
 
      if message.content == "Selamın aleyküm":
-          await message.channel.send("cami mi lan burası"
+          await message.channel.send("cami mi lan burası")
+
+     if message.content == "Selamın Aleyküm":
+          await message.channel.send("cami mi lan burası")
+
+     if message.content == "SELAMIN ALEYKÜM":
+          await message.channel.send("cami mi lan burası")
 
      if message.content.startswith("!catvibe"):
 
