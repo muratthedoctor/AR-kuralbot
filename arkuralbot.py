@@ -9,7 +9,7 @@ import random
 import os
 
 client = discord.Client()
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='&')
 
 @client.event
 async def on_ready():
@@ -39,7 +39,7 @@ async def on_message(message):
   if message.content == "sa" or "Sa" or "SA":
     await message.channel.send("cami mi lan burası")
   
-  if 'selamın aleyküm' in message.content.lower():
+  if message.content.lover() == "selamın aleyküm":
     await message.channel.send("cami mi lan burası")
     
   if message.content.startswith("!catvibe"):
@@ -84,7 +84,7 @@ async def on_message(message):
     await message.channel.send("tısssss :snake: :snake:")
     
   if message.content.startswith("ride or die"):
-    await message.channel.send("Remember? : red_car:")
+    await message.channel.send("Remember? :red_car:")
     
 token = os.environ.get("BOT_TOKEN")
 client.run(token)
