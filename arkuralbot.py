@@ -9,6 +9,7 @@ import random
 import os
 
 client = discord.Client()
+bot = commands.Bot(command_prefix='!')
 
 @client.event
 async def on_ready():
@@ -17,6 +18,13 @@ async def on_ready():
   print(client.user.name)
   print('------')
   
+@bot.command(name='roll_dice', help='Simulates rolling dice.')
+async def roll(ctx, number_of_dice: int, number_of_sides: int):
+  dice = [
+          str(random.choice(range(1, number_of_sides + 1)))
+          for _ in range(number_of_dice)]
+  await ctx.send(', '.join(dice))
+
 @client.event
 async def on_message(message):
   if message.author == client.user:
@@ -28,25 +36,10 @@ async def on_message(message):
   if message.content == "orospu":
     await message.channel.send("eğvle eğvle")
     
-  if message.content == "sa":
+  if message.content == "sa" or "Sa" or "SA":
     await message.channel.send("cami mi lan burası")
-    
-  if message.content == "Sa":
-    await message.channel.send("cami mi lan burası")
-    
-  if message.content == "SA":
-    await message.channel.send("cami mi lan burası")
-    
-  if message.content == "selamın aleyküm":
-    await message.channel.send("cami mi lan burası")
-    
-  if message.content == "Selamın aleyküm":
-    await message.channel.send("cami mi lan burası")
-    
-  if message.content == "Selamın Aleyküm":
-    await message.channel.send("cami mi lan burası")
-    
-  if message.content == "SELAMIN ALEYKÜM":
+  
+  if 'selamın aleyküm' in message.content.lower():
     await message.channel.send("cami mi lan burası")
     
   if message.content.startswith("!catvibe"):
