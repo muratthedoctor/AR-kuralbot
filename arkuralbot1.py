@@ -79,6 +79,11 @@ async def on_message(message):
         count += 1
     await message.channel.send(f'{count} tane kuralımız var.')
     
+# if message.content.startswith("!add_kural"):
+#   with open('arkurallar', 'a') as txtfile: 
+#     txtfile.write("\n"+message.content[11:])
+# await message.channel.send("Kural başarıyla eklendi.")
+    
   if message.content.startswith("!hello"):
     await message.channel.send("Hello {0.author.mention}".format(message))
     
