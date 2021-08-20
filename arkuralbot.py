@@ -36,11 +36,14 @@ async def on_message(message):
   if message.content == "orospu":
     await message.channel.send("eğvle eğvle")
     
-  if message.content == "sa" or "Sa" or "SA" or "selamın aleyküm" or "Selamın aleyküm" or "Selamın Aleyküm" or "SELAMIN ALEYKÜM":
-    await message.channel.send("cami mi lan burası")
-  
-  #if message.content.lower() == "selamın aleyküm":
+  #if message.content == "sa" or "Sa" or "SA" or "selamın aleyküm" or "Selamın aleyküm" or "Selamın Aleyküm" or "SELAMIN ALEYKÜM":
     #await message.channel.send("cami mi lan burası")
+
+  if message.content.lower() == "sa":
+    await message.channel.send("cami mi lan burası")
+
+  if message.content.lower() == "selamın aleyküm":
+    await message.channel.send("cami mi lan burası")
     
   if message.content.startswith("!catvibe"):
     embed = discord.Embed(title='Kedi', description='kediiiiieeeğğğ...', color=0x00ff00)
