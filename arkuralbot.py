@@ -53,7 +53,7 @@ async def on_message(message):
     embed = discord.Embed(title='Kedi', description='kediiiiieeeğğğ...', color=0x00ff00)
     file = discord.File("catvibe.gif", filename="image.gif")
     embed.set_image(url="attachment://image.gif")
-    await.message.channel.send(file=file, embed=embed)
+    await message.channel.send(file=file, embed=embed)
     
   if message.content.startswith("!random"):
     with open('arkurallar') as csvfile:
@@ -69,7 +69,7 @@ async def on_message(message):
         count += 1
       random.seed()
       rand = random.randint(1, count)
-      await.message.channel.send(f'Kural {nums[rand]} {kurallar[rand]}')
+      await message.channel.send(f'Kural {nums[rand]} {kurallar[rand]}')
   
   if message.content.startswith("!kactane"):
     with open('arkurallar') as csvfile:
