@@ -9,3 +9,81 @@ import random
 import os
 
 client = discord.Client()
+
+@client.event
+async def on_ready():
+  print("Bot is ready!")
+  print('Logged in as')
+  print(client.user.name)
+  print('------')
+  
+@client.evet
+async def on_message(message):
+  if message.author == client.user:
+    return
+  
+  if message.content == "orospu":
+    await message.channel.send("eğvle eğvle")
+    
+  if message.content == "sa":
+    await message.channel.send("cami mi lan burası")
+    
+  if message.content == "Sa":
+    await message.channel.send("cami mi lan burası")
+    
+  if message.content == "SA":
+    await message.channel.send("cami mi lan burası")
+    
+  if message.content == "selamın aleyküm":
+    await message.channel.send("cami mi lan burası")
+    
+  if message.content == "Selamın aleyküm":
+    await message.channel.send("cami mi lan burası")
+    
+  if message.content == "Selamın Aleyküm":
+    await message.channel.send("cami mi lan burası")
+    
+  if message.content == "SELAMIN ALEYKÜM":
+    await message.channel.send("cami mi lan burası")
+    
+  if message.content.startswith("!catvibe"):
+    embed = discord.Embed(title='Kedi', description='kediiiiieeeğğğ...', color=0x00ff00)
+    file = discord.File("catvibe.gif", filename="image.gif")
+    embed.set_image(url="attachment://image.gif")
+    await.message.channel.send(file=file, embed=embed)
+    
+  if message.content.startswith("!random"):
+    with open('arkurallar') as csvfile:
+      csv_reader = csv.reader(csvfile, delimiter='½')
+      nums = []
+      kurallar = []
+      count = -1
+      for row in csv_reader:
+        num = row[0]
+        kural = row[1]
+        nums.append(num)
+        kurallar.append(kural)
+        count += 1
+      random.seed()
+      rand = random.randint(1, count)
+      await.message.channel.send(f'Kural {nums[rand]} {kurallar[rand]}')
+  
+  if message.content.startswith("!kactane"):
+    with open('arkurallar') as csvfile:
+      csv_reader = csv.reader(csvfile, delimiter='½')
+      count = -1
+      for row in csv_reader:
+        count += 1
+    await message.channel.send(f'{count} tane kuralımız var.')
+    
+  if message.content.startswith("!hello"):
+    await message.channel.send("Hello {0.author.mention}".format(message))
+    
+  if message.content.startswith("!yılan"):
+    await message.channel.send("tısssss :snake: :snake:")
+    
+  if message.content.startswith("ride or die"):
+    await message.channel.send("Remember? : red_car:")
+    
+token = os.environ.get("BOT_TOKEN")
+client.run(token)
