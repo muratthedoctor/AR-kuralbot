@@ -39,8 +39,8 @@ async def on_message(message):
   if message.content == "sa" or "Sa" or "SA":
     await message.channel.send("cami mi lan burası")
   
-  #if message.content.lover() == "selamın aleyküm":
-    #await message.channel.send("cami mi lan burası")
+  if message.content.lower() == "selamın aleyküm":
+    await message.channel.send("cami mi lan burası")
     
   if message.content.startswith("!catvibe"):
     embed = discord.Embed(title='Kedi', description='kediiiiieeeğğğ...', color=0x00ff00)
